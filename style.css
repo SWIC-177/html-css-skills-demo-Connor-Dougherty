@@ -1,1 +1,262 @@
 @import url("node_modules/modern-normalize/modern-normalize.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #264040;
+  margin: 0;
+  color: #080d0d;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+#wrapper {
+  background-color: #1f3333;
+  padding: 0;
+}
+
+header {
+  background-color: #264040;
+  background-image: url("./images/poss.png");
+  background-repeat: no-repeat;
+  color: #c0d8d8;
+  padding-left: 105px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 128px;
+}
+
+header a {
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+header a:link {
+  color: #c0d8d8;
+}
+
+header a:visited {
+  color: #74aaaa;
+}
+
+header a:hover {
+  color: #e6f0f0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  color: #080d0d;
+}
+
+h3,
+dt {
+  color: #080d0d;
+}
+
+h4 {
+  background-color: #548c8c;
+  font-size: 1.2em;
+  padding-left: 0.5em;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid #221811;
+  clear: left;
+}
+
+nav {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+nav a:link {
+  color: #c0d8d8;
+}
+
+nav a:visited {
+  color: #74aaaa;
+}
+
+nav a:hover {
+  color: #e6f0f0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.25em;
+}
+
+nav ul li {
+  padding: 0.5em 1em;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+main {
+  background-color: #548c8c;
+  display: block;
+  padding: 0 0 2em;
+}
+
+main h2,
+h3,
+h4,
+p,
+div,
+dl {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+main ul {
+  padding-left: 2em;
+}
+
+.details {
+  padding-left: 20%;
+  padding-right: 20%;
+  overflow: auto;
+}
+
+img {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#homehero {
+  height: 300px;
+  background-image: url("./images/possroad.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#heromugs {
+  height: 300px;
+  background-image: url("./images/threeposs.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#heroguitar {
+  height: 300px;
+  background-image: url("./images/possfootage.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+footer {
+  background-color: #264040;
+  font-size: 0.6em;
+  color: #83afaf;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 1em;
+  border-top: 2px solid #1f3333;
+}
+
+#mobile {
+  display: inline;
+}
+
+#desktop {
+  display: none;
+}
+
+@media (width >= 600px) {
+  header {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  nav ul {
+    text-align: center;
+    flex-flow: row no-wrap;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    border-bottom: none;
+  }
+
+  #homehero {
+    height: 50vh;
+    background-image: url("./images/villan.png");
+  }
+
+  #heromugs {
+    background-image: url("./images/heroposs.png");
+  }
+
+  #heroguitar {
+    background-image: url("./images/heropossfootage.png");
+  }
+
+  #flow {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #mobile {
+    display: none;
+  }
+
+  #desktop {
+    display: inline;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: row;
+  }
+
+  h4 {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (width >= 1024px) {
+  header {
+    grid-area: header;
+  }
+
+  nav {
+    grid-area: nav;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  #wrapper {
+    display: grid;
+    grid-template:
+      "header header"
+      "nav	  main"
+      "footer footer"
+      /200px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
